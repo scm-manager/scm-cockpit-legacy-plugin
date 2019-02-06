@@ -34,7 +34,7 @@ public class ActivityLegacyResource {
     @GET
     @Path("")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response commitsPerAuthor(@Context UriInfo uriInfo) {
+    public Response latestActivities(@Context UriInfo uriInfo) {
         List<ActivityDto> activities = activityResource.getLatestActivity(uriInfo).getActivities();
 
         return Response.ok(new LegacyActivityCollectionDto(activities)).build();
