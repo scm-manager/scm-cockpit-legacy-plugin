@@ -1,6 +1,6 @@
 package sonia.scm.legacy;
 
-    import lombok.Getter;
+import lombok.Getter;
 import sonia.scm.activity.api.ActivityDto;
 import sonia.scm.activity.api.ActivityResource;
 import sonia.scm.api.v2.resources.ChangesetDto;
@@ -57,6 +57,7 @@ public class ActivityLegacyResource {
             this.repositoryType = activityDto.getRepositoryType();
             this.changeset = new LegacyChangesetDto(activityDto.extractChangeset());
         }
+
         @XmlElement(name = "repository-name")
         private String repositoryName;
 
@@ -74,8 +75,8 @@ public class ActivityLegacyResource {
         private final Long date;
 
         LegacyChangesetDto(ChangesetDto changeset) {
-            this.author = changeset.getAuthor() == null? null: new LegacyAuthorDto(changeset.getAuthor());
-            this.properties = this.author == null? emptyList(): singletonList(new LegacyPropertyDto("gravatar-hash", GravatarMD5Util.md5Hex(this.author.getMail())));
+            this.author = changeset.getAuthor() == null ? null : new LegacyAuthorDto(changeset.getAuthor());
+            this.properties = this.author == null ? emptyList() : singletonList(new LegacyPropertyDto("gravatar-hash", GravatarMD5Util.md5Hex(this.author.getMail())));
             this.description = changeset.getDescription();
             this.date = changeset.getDate().toEpochMilli();
         }
