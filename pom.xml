@@ -32,7 +32,29 @@
   <name>scm-cockpit-legacy-plugin</name>
   <url>https://bitbucket.org/sdorra/scm-legacy-plugin</url>
   <description>This plugin offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit.</description>
-  
+
+  <dependencies>
+
+    <dependency>
+      <groupId>sonia.scm.plugins</groupId>
+      <artifactId>scm-statistic-plugin</artifactId>
+      <version>2.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>sonia.scm.plugins</groupId>
+      <artifactId>scm-activity-plugin</artifactId>
+      <version>2.0.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>sonia.scm.plugins</groupId>
+      <artifactId>scm-rest-legacy-plugin</artifactId>
+      <version>2.0-SNAPSHOT</version>
+    </dependency>
+
+  </dependencies>
+
   <!--
     Informations for the source code repository of the plugin.
     For more informations have a look at: http://maven.apache.org/pom.html#SCM
