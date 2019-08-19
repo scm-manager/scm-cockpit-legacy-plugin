@@ -31,7 +31,7 @@
   <packaging>smp</packaging>
   <name>scm-cockpit-legacy-plugin</name>
   <url>https://bitbucket.org/sdorra/scm-legacy-plugin</url>
-  <description>This plugin offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit.</description>
+  <description>Offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit</description>
 
   <dependencies>
 
