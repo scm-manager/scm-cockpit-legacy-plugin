@@ -30,7 +30,7 @@
   <version>2.0-SNAPSHOT</version>
   <packaging>smp</packaging>
   <name>scm-cockpit-legacy-plugin</name>
-  <url>https://bitbucket.org/sdorra/scm-legacy-plugin</url>
+  <url>https://github.com/scm-manager/scm-cockpit-legacy-plugin</url>
   <description>Offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit</description>
 
   <dependencies>
@@ -60,9 +60,9 @@
     For more informations have a look at: http://maven.apache.org/pom.html#SCM
   -->
   <scm>
-    <connection>scm:git:https://bitbucket.org/scm-manager/scm-cockpit-legacy-plugin</connection>
-    <developerConnection>scm:git:https://bitbucket.org/scm-manager/scm-cockpit-legacy-plugin</developerConnection>
-    <url>https://bitbucket.org/scm-manager/scm-cockpit-legacy-plugin</url>
+    <connection>scm:git:https://github.com/scm-manager/scm-cockpit-legacy-plugin</connection>
+    <developerConnection>scm:git:https://github.com/scm-manager/scm-cockpit-legacy-plugin</developerConnection>
+    <url>https://github.com/scm-manager/scm-cockpit-legacy-plugin</url>
   </scm>
   
   <!--
