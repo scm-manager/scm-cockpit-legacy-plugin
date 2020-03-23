@@ -25,8 +25,6 @@ package sonia.scm.legacy;
 
 import com.github.sdorra.shiro.SubjectAware;
 import de.otto.edison.hal.Embedded;
-import org.jboss.resteasy.core.Dispatcher;
-import org.jboss.resteasy.mock.MockDispatcherFactory;
 import org.jboss.resteasy.mock.MockHttpRequest;
 import org.jboss.resteasy.mock.MockHttpResponse;
 import org.junit.Before;
@@ -40,6 +38,7 @@ import sonia.scm.activity.api.ActivityDto;
 import sonia.scm.activity.api.ActivityResource;
 import sonia.scm.api.v2.resources.ChangesetDto;
 import sonia.scm.api.v2.resources.PersonDto;
+import sonia.scm.web.RestDispatcher;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
@@ -62,13 +61,13 @@ public class ActivityLegacyResourceTest {
     @InjectMocks
     private ActivityLegacyResource resource;
 
-    private Dispatcher dispatcher;
+    private RestDispatcher dispatcher;
     private final MockHttpResponse response = new MockHttpResponse();
 
     @Before
     public void setUp() {
-        dispatcher = MockDispatcherFactory.createDispatcher();
-        dispatcher.getRegistry().addSingletonResource(resource);
+        dispatcher = new RestDispatcher();
+        dispatcher.addSingletonResource(resource);
     }
 
     @Test

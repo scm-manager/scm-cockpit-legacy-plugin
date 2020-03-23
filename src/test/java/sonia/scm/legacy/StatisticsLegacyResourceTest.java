@@ -25,8 +25,6 @@ package sonia.scm.legacy;
 
 import com.github.sdorra.shiro.SubjectAware;
 import com.google.common.collect.ImmutableMultiset;
-import org.jboss.resteasy.core.Dispatcher;
-import org.jboss.resteasy.mock.MockDispatcherFactory;
 import org.jboss.resteasy.mock.MockHttpRequest;
 import org.jboss.resteasy.mock.MockHttpResponse;
 import org.junit.Before;
@@ -42,6 +40,7 @@ import sonia.scm.statistic.dto.CommitsPerAuthor;
 import sonia.scm.statistic.dto.CommitsPerMonth;
 import sonia.scm.statistic.resources.StatisticResource;
 import sonia.scm.statistic.resources.StatisticSubResource;
+import sonia.scm.web.RestDispatcher;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
@@ -69,13 +68,13 @@ public class StatisticsLegacyResourceTest {
     @InjectMocks
     private StatisticsLegacyResource resource;
 
-    private Dispatcher dispatcher;
+    private RestDispatcher dispatcher;
     private final MockHttpResponse response = new MockHttpResponse();
 
     @Before
     public void setUp() {
-        dispatcher = MockDispatcherFactory.createDispatcher();
-        dispatcher.getRegistry().addSingletonResource(resource);
+        dispatcher = new RestDispatcher();
+        dispatcher.addSingletonResource(resource);
 
         when(repositoryServiceFactory.create(anyString())).thenReturn(repositoryService);
 
