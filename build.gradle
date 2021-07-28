@@ -39,6 +39,7 @@ scmPlugin {
   description = "Offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit"
   author = "Cloudogu GmbH"
   category = "Legacy Support"
+  avatarUrl = '/images/cockpit-legacy-logo.png'
 
   openapi {
     packages = [
