@@ -15,7 +15,7 @@
  */
 
 plugins {
-  id 'org.scm-manager.smp' version '0.17.0'
+  id 'org.scm-manager.smp' version '0.20.0'
 }
 
 dependencies {
@@ -26,6 +26,7 @@ dependencies {
 
 scmPlugin {
   scmVersion = "3.0.0"
+  isScm4Compatible = true
   displayName = "Cockpit"
   description = "Offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit"
   author = "Cloudogu GmbH"
