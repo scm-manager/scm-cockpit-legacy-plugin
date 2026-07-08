@@ -25,7 +25,7 @@ dependencies {
 }
 
 scmPlugin {
-  scmVersion = "3.0.0"
+  scmVersion = "3.7.0"
   isScm4Compatible = true
   displayName = "Cockpit"
   description = "Offers a subset of the SCM-Manager v1 REST API for the use of Cloudogu Ecosystem Cockpit"
